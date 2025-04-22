@@ -1,0 +1,162 @@
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+}
+
+.user-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.user-meta {
+  flex: 1;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.rating {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.score {
+  color: #ff9500;
+  font-weight: bold;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1rpx solid #eee;
+  padding-top: 20rpx;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 20rpx;
+}
+
+.stat-value {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 20rpx 0;
+  color: #333;
+}
+
+.function-area {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.function-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.function-item {
+  width: 50%;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.function-item:nth-child(1) {
+  color: #4A90E2;
+}
+
+.function-item:nth-child(2) {
+  color: #07C160;
+}
+
+.function-item:nth-child(3) {
+  color: #FF9900;
+}
+
+.function-item:nth-child(4) {
+  color: #FF4D4F;
+}
+
+.function-item:active {
+  opacity: 0.7;
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+}
+
+.function-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.order-section {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+}
+
+.order-list {
+  padding: 20rpx 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.order-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+.order-content {
+  flex: 1;
+}
+
+.order-status {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.order-desc {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.arrow-icon {
+  width: 32rpx;
+  height: 32rpx;
+}

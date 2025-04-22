@@ -1,0 +1,20 @@
+<!--pages/recent-orders/recent-orders.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">最近7天已完成订单</text>
+  </view>
+  
+  <view class="order-list">
+    <block wx:for="{{recentOrders}}" wx:key="id">
+      <view class="order-item">
+        <text class="order-title">{{item.title}}</text>
+        <text class="order-date">{{item.createTime}}</text>
+        <text class="order-status">{{item.status}}</text>
+      </view>
+    </block>
+    
+    <view wx:if="{{recentOrders.length === 0}}" class="empty-tip">
+      <text>暂无最近7天完成的订单</text>
+    </view>
+  </view>
+</view>

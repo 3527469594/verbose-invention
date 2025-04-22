@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "envId": "${ENV_ID}",
+  "framework": {
+    "name": "express",
+    "config": {
+      "service": {
+        "name": "paopaoxuetang",
+        "description": "跑跑学堂后端服务",
+        "cpu": 0.5,
+        "mem": 1024,
+        "minNum": 1,
+        "maxNum": 2,
+        "policy": {
+          "restartPolicy": "always",
+          "updatePolicy": "rolling"
+        },
+        "traffic": [
+          {
+            "port": 80,
+            "targetPort": 3000,
+            "protocol": "HTTP"
+          }
+        ],
+        "env": [
+          {
+            "name": "NODE_ENV",
+            "value": "production"
+          },
+          {
+            "name": "DB_HOST",
+            "value": "mysql-host-prod.tencentcloudapi.com"
+          },
+          {
+            "name": "DB_PORT",
+            "value": 3306
+          },
+          {
+            "name": "DB_USER",
+            "value": "${DB_USER}"
+          },
+          {
+            "name": "DB_PASSWORD",
+            "value": "${DB_PASSWORD}"
+          }
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "services": []
+  }
+}

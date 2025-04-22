@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="header">
+    <text class="title">跑跑学堂</text>
+    <text class="subtitle">让生活更便捷</text>
+  </view>
+  
+  <view class="quick-publish" bindtap="navigateToPublish">
+    <text>+ 快速发布需求</text>
+  </view>
+  
+  <view class="order-list">
+    <view class="section-title">
+      <text>附近订单</text>
+    </view>
+    
+    <block wx:for="{{orderList}}" wx:key="id">
+      <view class="order-item" bindtap="acceptOrder" data-id="{{item.id}}">
+        <view class="order-type">
+          <text>{{item.type}}</text>
+        </view>
+        <view class="order-info">
+          <text>{{item.description}}</text>
+          <text>距离: {{item.distance}}km</text>
+          <text>报酬: ¥{{item.reward}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

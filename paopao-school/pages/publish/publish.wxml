@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="header" style="height: 92rpx; display: block; box-sizing: border-box">
+    <text class="title" style="position: relative; left: 6rpx; top: -21rpx">发布需求</text>
+  </view>
+  
+  <view class="form-container">
+    <view class="form-item">
+      <text class="label">服务类型</text>
+      <picker mode="selector" range="{{serviceTypes}}" bindchange="onServiceTypeChange">
+        <view class="picker">
+          {{serviceTypes[currentServiceType]}}
+        </view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <text class="label">取件地点</text>
+      <input placeholder="请输入取件地点" bindinput="onPickupLocationChange" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">收件地点</text>
+      <input placeholder="请输入收件地点" bindinput="onDeliveryLocationChange" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">快递单号/取件码</text>
+      <input placeholder="选填" bindinput="onTrackingNumberChange" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">手机号</text>
+      <input type="number" placeholder="请输入11位手机号" bindinput="onPhoneChange" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">需求描述</text>
+      <textarea style="width: 610rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; height: 106rpx" placeholder="请详细描述您的需求" auto-height bindinput="onDescriptionChange" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">报酬金额</text>
+      <view class="reward-input">
+        <text>¥</text>
+        <input type="number" placeholder="0" bindinput="onRewardChange" />
+      </view>
+    </view>
+    
+    <button type="primary" bindtap="onSubmit">发布需求</button>
+  </view>
+</view>

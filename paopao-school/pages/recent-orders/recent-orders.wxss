@@ -1,0 +1,45 @@
+/* pages/recent-orders/recent-orders.wxss */
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  margin-bottom: 30rpx;
+}
+
+.header .title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.order-item {
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.order-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.order-date, .order-status {
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #999;
+  padding: 40rpx 0;
+}

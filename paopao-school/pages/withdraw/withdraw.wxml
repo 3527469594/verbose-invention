@@ -1,0 +1,22 @@
+<!--pages/withdraw/withdraw.wxml-->
+<view class="container">
+  <view class="form-section">
+    <view class="form-title">当前保证金余额: {{balance}}元</view>
+    <view class="form-title">提现金额</view>
+    <input 
+      type="number" 
+      placeholder="请输入提现金额"
+      bindinput="inputAmount"
+      class="amount-input"
+    />
+    <text class="unit">元</text>
+  </view>
+  
+  <button 
+    type="primary" 
+    bindtap="submitWithdraw"
+    class="submit-btn"
+  >
+    确认提现
+  </button>
+</view>

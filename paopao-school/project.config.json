@@ -1,0 +1,29 @@
+{
+    "appid": "wxf2535481a07f14ce",
+    "compileType": "miniprogram",
+    "libVersion": "3.8.0",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "setting": {
+        "coverView": true,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "enhance": true,
+        "showShadowRootInWxmlPanel": true,
+        "packNpmRelationList": [],
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        }
+    },
+    "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
+    "projectname": "%E8%B7%91%E8%B7%91%E5%AD%A6%E5%A0%821.0"
+}

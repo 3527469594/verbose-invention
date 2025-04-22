@@ -1,0 +1,27 @@
+<!--pages/my-posts/my-posts.wxml-->
+<view class="container">
+  <view class="section-title">我的发布</view>
+  
+  <view class="post-list">
+    <block wx:for="{{posts}}" wx:key="id">
+      <view class="post-item">
+        <view class="post-header">
+          <text class="post-status {{item.status === '已接取' ? 'taken' : item.status === '已送达' ? 'delivered' : 'pending'}}">{{item.status}}</text>
+          <text class="post-time">{{item.createTime}}</text>
+        </view>
+        
+        <view class="post-content">
+          <text class="post-location">从 {{item.pickupLocation}} 送到 {{item.deliveryLocation}}</text>
+          <text class="post-reward">报酬: {{item.reward}}元</text>
+        </view>
+        
+        <button 
+          wx:if="{{item.status === '未接取'}}" 
+          class="cancel-btn" 
+          bindtap="cancelPost" 
+          data-id="{{item.id}}"
+        >取消发布</button>
+      </view>
+    </block>
+  </view>
+</view>

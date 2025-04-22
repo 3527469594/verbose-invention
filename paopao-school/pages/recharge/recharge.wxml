@@ -1,0 +1,21 @@
+<!--pages/recharge/recharge.wxml-->
+<view class="container">
+  <view class="form-section">
+    <view class="form-title">充值金额</view>
+    <input 
+      type="number" 
+      placeholder="请输入充值金额"
+      bindinput="inputAmount"
+      class="amount-input"
+    />
+    <text class="unit">元</text>
+  </view>
+  
+  <button 
+    type="primary" 
+    bindtap="submitRecharge"
+    class="submit-btn"
+  >
+    确认充值
+  </button>
+</view>

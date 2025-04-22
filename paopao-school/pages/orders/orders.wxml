@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <text class="title">我的订单</text>
+  </view>
+  
+  <view class="tabs">
+    <view class="tab {{currentTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-tab="0">
+      <text>进行中</text>
+    </view>
+    <view class="tab {{currentTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-tab="1">
+      <text>已完成</text>
+    </view>
+  </view>
+  
+  <view class="order-list">
+    <block wx:for="{{filteredOrders}}" wx:key="id">
+      <view class="order-item">
+        <view class="order-header">
+          <text class="order-type">{{item.type}}</text>
+          <text class="order-status">{{item.status}}</text>
+        </view>
+        <view class="order-info">
+          <text>{{item.description}}</text>
+          <text>创建时间: {{item.createTime}}</text>
+          <text>报酬: ¥{{item.reward}}</text>
+        </view>
+        <view class="order-actions" wx:if="{{currentTab === 0}}">
+          <button size="mini" bindtap="cancelOrder" data-id="{{item.id}}">取消</button>
+          <button size="mini" type="primary" bindtap="confirmOrder" data-id="{{item.id}}">确认完成</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
